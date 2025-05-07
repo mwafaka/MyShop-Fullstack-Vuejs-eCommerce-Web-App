@@ -63,8 +63,6 @@ async function handleRegister() {
         if (!response.ok) {
             throw new Error(data.msg || 'Registration failed.')
         }
-
-        console.log('User registered:', data)
         setTimeout(() => {
             router.push('/login')
         }, 1500)

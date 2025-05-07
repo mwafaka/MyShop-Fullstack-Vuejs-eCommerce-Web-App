@@ -24,21 +24,11 @@
 </template>
 
 <script setup>
-import { ref, onMounted, computed } from 'vue'
-import { useUserStore } from '../store/user'
+import { ref, onMounted } from 'vue'
 import axios from 'axios'
 
 const products = ref([])
-const newProduct = ref({
-  name: '',
-  description: '',
-  price: 0,
-  image: ''
-})
 
-const userStore = useUserStore()
-
-const user = userStore
 
 onMounted(async () => {
   await fetchProducts()
@@ -54,6 +44,4 @@ const addToCart = async (id) => {
   await axios.post('http://localhost:5000/api/cart', { productId: id })
   alert('Added to cart')
 }
-
-
 </script>
