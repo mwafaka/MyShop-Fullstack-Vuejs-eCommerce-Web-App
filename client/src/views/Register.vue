@@ -59,7 +59,7 @@ async function handleRegister() {
         })
 
         const data = await response.json()
-        console.log(data.msg)
+
         if (!response.ok) {
             throw new Error(data.msg || 'Registration failed.')
         }
@@ -68,7 +68,7 @@ async function handleRegister() {
         setTimeout(() => {
             router.push('/login')
         }, 1500)
-        // Optional: Redirect or show success message
+
     } catch (err) {
         error.value = err.message
         console.log(error.value)

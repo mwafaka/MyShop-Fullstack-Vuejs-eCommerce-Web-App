@@ -45,7 +45,7 @@ const addProduct = async () => {
         router.push('/products') // redirect to product list
     } catch (err) {
         console.error(err)
-        
+
     }
 }
 </script>

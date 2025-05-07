@@ -3,29 +3,20 @@
     <h1 class="text-3xl font-semibold text-center mb-6 text-gray-800">Login</h1>
     <form @submit.prevent="handleLogin">
       <div class="mb-4">
-        <input
-          v-model="email"
-          placeholder="Email"
-          class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition duration-300"
-        />
+        <input v-model="email" placeholder="Email"
+          class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition duration-300" />
       </div>
       <div class="mb-6">
-        <input
-          v-model="password"
-          type="password"
-          placeholder="Password"
-          class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition duration-300"
-        />
+        <input v-model="password" type="password" placeholder="Password"
+          class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition duration-300" />
       </div>
-      <button
-        type="submit"
-        class="w-full py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition duration-300"
-      >
+      <button type="submit"
+        class="w-full py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition duration-300">
         Login
       </button>
     </form>
     <p class="text-center mt-4 text-sm text-gray-600">
-      Don't have an account? 
+      Don't have an account?
       <router-link to="/register" class="text-blue-600 hover:underline">Register here</router-link>
     </p>
   </div>

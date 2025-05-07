@@ -4,39 +4,21 @@
     <nav class="bg-white shadow-sm px-6 py-4 flex justify-between items-center sticky top-0 z-50">
       <div class="flex gap-6 items-center">
         <RouterLink to="/" class="text-2xl font-bold text-blue-600 tracking-tight hover:opacity-90">MyShop</RouterLink>
-        <RouterLink
-          v-if="isAuthenticated"
-          to="/"
-          class="text-sm text-gray-700 hover:text-blue-500 transition"
-        >Home</RouterLink>
-        <RouterLink
-          v-if="isAuthenticated"
-          to="/cart"
-          class="text-sm text-gray-700 hover:text-blue-500 transition"
-        >Cart</RouterLink>
-        <RouterLink
-          v-if="isAdmin"
-          to="/admin"
-          class="text-sm text-gray-700 hover:text-blue-500 transition"
-        >Admin</RouterLink>
+        <RouterLink v-if="isAuthenticated" to="/" class="text-sm text-gray-700 hover:text-blue-500 transition">Home
+        </RouterLink>
+        <RouterLink v-if="isAuthenticated" to="/cart" class="text-sm text-gray-700 hover:text-blue-500 transition">Cart
+        </RouterLink>
+        <RouterLink v-if="isAdmin" to="/admin" class="text-sm text-gray-700 hover:text-blue-500 transition">Admin
+        </RouterLink>
       </div>
 
       <div class="flex gap-4 items-center">
-        <RouterLink
-          v-if="!isAuthenticated"
-          to="/login"
-          class="text-sm text-gray-700 hover:text-blue-500 transition"
-        >Login</RouterLink>
-        <RouterLink
-          v-if="!isAuthenticated"
-          to="/register"
-          class="text-sm text-gray-700 hover:text-blue-500 transition"
-        >Register</RouterLink>
-        <button
-          v-if="isAuthenticated"
-          @click="logout"
-          class="text-sm text-red-600 hover:text-red-800 transition"
-        >Logout</button>
+        <RouterLink v-if="!isAuthenticated" to="/login" class="text-sm text-gray-700 hover:text-blue-500 transition">
+          Login</RouterLink>
+        <RouterLink v-if="!isAuthenticated" to="/register" class="text-sm text-gray-700 hover:text-blue-500 transition">
+          Register</RouterLink>
+        <button v-if="isAuthenticated" @click="logout"
+          class="text-sm text-red-600 hover:text-red-800 transition">Logout</button>
       </div>
     </nav>
 
@@ -58,9 +40,6 @@ const store = useUserStore()
 onMounted(async () => {
   if (store.token) {
     await store.fetchUser()
-
-
-
   }
 })
 const isAuthenticated = computed(() => !!store.token)
@@ -72,8 +51,3 @@ const logout = () => {
 }
 </script>
 
-<style scoped>
-nav a {
-  @apply text-blue-600 hover:text-blue-800 transition;
-}
-</style>
