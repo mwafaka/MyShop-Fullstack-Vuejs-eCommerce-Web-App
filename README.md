@@ -1,4 +1,6 @@
 # 🛍️ MyShop — Fullstack Vuejs eCommerce Web App
+![Alt Text](/screenshots/Screenshot%20from%202025-05-07%2006-52-45.png)
+![Alt Text](/screenshots/Screenshot%20from%202025-05-07%2006-53-02.png)
 
 A sleek and modern fullstack eCommerce application built with **Vue.js (frontend)** and **Node.js + Express (backend)**, featuring user authentication, admin dashboard, image upload, shopping cart functionality, and a responsive iPhone-style design using Tailwind CSS.
 
@@ -101,7 +103,6 @@ To create an admin:
 ```
 
 
-## ✨ Screenshots
 
-![Alt Text](/screenshots/Screenshot%20from%202025-05-07%2006-52-45.png)
-![Alt Text](/screenshots/Screenshot%20from%202025-05-07%2006-53-02.png)
+
+
